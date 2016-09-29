@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vue.js"></script>
+    <script>
+        window.onload=function(){
+            new Vue({
+                el:'#box',
+                data:{
+                },
+                methods:{
+                    show:function(){
+                        alert('您按了回车');
+                    },
+                    show2:function(){
+                        alert('您按了左键');
+                    },
+                    show3:function(){
+                        alert('您按了右键');
+                    }
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+<div id="box">
+    <input type="text" value="" @keyup.13="show()" @keydown.37="show2()" @keydown.right="show3()">
+</div>
+</body>
+</html>

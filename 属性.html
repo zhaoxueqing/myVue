@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vue.js"></script>
+    <script>
+        window.onload=function(){
+            new Vue({
+                el:'#box',
+                data:{
+                    url:'https://www.baidu.com/img/bd_logo1.png',
+                    w:'200px',
+                    t:'这是一张图'
+                }
+            });
+        };
+    </script>
+</head>
+<body>
+<div id="box">
+    <!-- v-bind:属性名 用来绑属性  :属性名 简写形式-->
+    <img :src="url" :width="w" :title="t" :alt="">
+</div>
+</body>
+</html>

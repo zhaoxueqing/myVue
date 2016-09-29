@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vue.js"></script>
+    <script>
+        window.onload=function(){
+            new Vue({
+                el:'#btn',
+                data:{
+
+                },
+                methods:{
+                    show:function(ev,n){
+                        alert(ev.clientX);
+                        alert(n);
+                    }
+                }
+            });
+        };
+    </script>
+</head>
+<body>
+<div>
+    <button @click="show($event,12)" id="btn">点击</button>
+</div>
+</body>
+</html>

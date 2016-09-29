@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vue.js"></script>
+    <script>
+        window.onload=function(){
+          new Vue({
+              el:'#box',
+              data:{
+                  c:{
+                      color:'red',
+                      background:'yellow'
+                  },
+                  l:{
+                      width:'200px',
+                      height:'50px',
+                      lineHeight:'50px'
+                  }
+              },
+              methods:{
+                  
+              }
+          });
+        };
+    </script>
+</head>
+<body>
+<div id="box">
+    <p :style="[c,l]">这是一段文字</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vue.js"></script>
+    <script>
+        window.onload=function(){
+            new Vue({
+                el:'#box',
+                data:{},
+                methods:{
+                    show2:function(){
+                        alert(2);
+                    },
+                    show:function(){
+                        alert(1);
+                    }
+                }
+            });
+        };
+    </script>
+</head>
+<body>
+<div id="box">
+    <div @click="show2()">
+        <button @click.stop="show()">点击</button>
+    </div>
+</div>
+</body>
+</html>

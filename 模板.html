@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vue.js"></script>
+    <script>
+        window.onload=function(){
+          new Vue({
+              el:'#box',
+              data:{
+                  msg:'aaa'
+              }
+          });
+        };
+    </script>
+</head>
+<body>
+<div id="box">
+    <input v-model="msg">
+    <br>
+    {{msg}}
+    <br>
+    {{*msg}}<!--数据只绑定一次 -->
+    <br>
+    {{{msg}}} <!--html 转义输出 -->
+
+</div>
+</body>
+</html>

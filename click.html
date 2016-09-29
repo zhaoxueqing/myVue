@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vue.js"></script>
+    <script>
+        window.onload=function(){
+          new Vue({
+              el:'#box',
+              data:{
+                  arr:['apple','banana','orange']
+              },
+              methods:{
+                  show:function(){
+                      this.arr.push('toto');//this 是new 出来的这个
+                  }
+              }
+          });
+        };
+    </script>
+</head>
+<body>
+<div id="box">
+    <!--v-on:事件名 事件  简写@事件名-->
+    <input type="button" value="点击" v-on:click="show()">
+    <input type="text" value="" >
+    <ul>
+        <li v-for="value in arr">
+            {{value}}
+        </li>
+    </ul>
+</div>
+</body>
+</html>
